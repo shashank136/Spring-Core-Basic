@@ -10,13 +10,11 @@ public class GreetingService {
 	
 	private HelloWorldService helloWorldService;
 	
-	// Constructor based injection
+	// Setter based injection
 	@Autowired
-	public GreetingService(HelloWorldService helloWorldService) {
+	public void setHelloWorldService(HelloWorldService helloWorldService) {
 		this.helloWorldService = helloWorldService;
 	}
-
-
 
 	public void getMessage() {
 		System.out.println("Inside GreetingService Controller");
