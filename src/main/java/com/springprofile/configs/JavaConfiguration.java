@@ -34,5 +34,10 @@ public class JavaConfiguration {
 	public HelloWorldService helloWorldServiceSpanish(HelloWorldFactory factory) {
 		return factory.createHelloWorldService("sp");
 	}
+	
+	@Bean(name="hindi") // Assigning name to bean
+	public HelloWorldService helloWorldServiceHindi(HelloWorldFactory factory) {
+		return factory.createHelloWorldService("hz");
+	}
 
 }

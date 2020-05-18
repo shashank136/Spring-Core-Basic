@@ -14,6 +14,8 @@ public class GreetingService {
 	
 	private HelloWorldService helloWorldServiceSpanish;
 	
+	private HelloWorldService helloWorldServiceHindi;
+	
 	@Autowired
 	public void setHelloWorldService(HelloWorldService helloWorldService) {
 		this.helloWorldService = helloWorldService;
@@ -24,11 +26,18 @@ public class GreetingService {
 	public void setHelloWorldServiceSpanish(HelloWorldService helloWorldServiceSpanish) {
 		this.helloWorldServiceSpanish = helloWorldServiceSpanish;
 	}
+	
+	@Autowired
+	@Qualifier("hindi") // Qualifier also takes bean name which is more convenient then given the method name 
+	public void setHelloWorldServiceHindi(HelloWorldService helloWorldServiceHindi) {
+		this.helloWorldServiceHindi = helloWorldServiceHindi;
+	}
 
 	public void getMessage() {
 		System.out.println("Inside GreetingService Controller");
 		helloWorldService.sayHello();
 		helloWorldServiceSpanish.sayHello();
+		helloWorldServiceHindi.sayHello();
 	}
 	
 
