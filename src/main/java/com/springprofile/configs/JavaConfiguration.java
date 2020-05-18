@@ -19,19 +19,19 @@ public class JavaConfiguration {
 	@Bean
 	@Profile("english")
 	@Primary
-	public HelloWorldService helloWorldServiceEngImpl(HelloWorldFactory factory) {
+	public HelloWorldService helloWorldServiceEnglish(HelloWorldFactory factory) {
 		return factory.createHelloWorldService("en");
 	}
 	
 	@Bean
 	@Profile("french")
 	@Primary
-	public HelloWorldService helloWorldServiceFrenchImpl(HelloWorldFactory factory) {
+	public HelloWorldService helloWorldServiceFrench(HelloWorldFactory factory) {
 		return factory.createHelloWorldService("fr");
 	}
 	
 	@Bean
-	public HelloWorldService helloWorldServiceSpanishImpl(HelloWorldFactory factory) {
+	public HelloWorldService helloWorldServiceSpanish(HelloWorldFactory factory) {
 		return factory.createHelloWorldService("sp");
 	}
 
